@@ -1,0 +1,29 @@
+# Logs
+logs/
+*.log
+
+# Cowrie data
+honeypot/cowrie/var/
+honeypot/cowrie/etc/cowrie.cfg
+
+# Splunk
+splunkforwarder.tgz
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Environment
+cowrie-env/
+*.env
+
+# Sensitive data
+*.pem
+*.key
+*.pid
+
+# Temporary files
+*.tmp
+*.bak
+*~

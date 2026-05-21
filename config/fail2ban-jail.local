@@ -1,0 +1,3 @@
+[DEFAULT]
+# Ignore your Windows host IP
+ignoreip = 127.0.0.1/8 ::1 192.168.1.7 192.168.1.0/24

@@ -1,0 +1,15 @@
+[Unit]
+Description=Cowrie SSH Honeypot
+After=network.target
+
+[Service]
+Type=simple
+User=ubuntu
+WorkingDirectory=/home/ubuntu/ssh-security-project/honeypot/cowrie
+Environment="PYTHONPATH=/home/ubuntu/ssh-security-project/honeypot/cowrie"
+ExecStart=/home/ubuntu/ssh-security-project/honeypot/cowrie-env/bin/twistd --nodaemon --umask=0022 --pidfile= --logger cowrie.python.logfile.logger cowrie
+Restart=on-failure
+RestartSec=5s
+
+[Install]
+WantedBy=multi-user.target
